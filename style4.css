@@ -83,7 +83,7 @@ p{
     left: 50%;
     margin: 0 -55px;
     transition: translate(-50%,-50%);
-    animation: transitionIn 0.75s ease-in-out;
+    animation: transitionIn 0.75s;
 }
 
 @keyframes transitionIn {
