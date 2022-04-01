@@ -77,7 +77,7 @@ p{
     text-align: center;
     font-weight: bolder;
     margin: 10%;
-    animation: transitionIn 0.75s ease-in-out;
+    animation: transitionIn 0.75s;
 }
 
 @keyframes transitionIn {
@@ -109,7 +109,7 @@ p{
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
-  animation: transitionIn 0.75s ease-in-out;
+  animation: transitionIn 0.75s;
 }
 
 @keyframes transitionIn{
