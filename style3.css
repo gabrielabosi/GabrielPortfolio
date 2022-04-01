@@ -1,0 +1,146 @@
+/* the photo gallery for portfolio link*/
+
+
+@font-face {
+    font-family: Avant Garde;
+    src: url("Avant\ Garde/AVANTN.ttf");
+}
+
+body {
+    /* REMOVE margin: 40%;*/
+    font-family: Avant Garde;
+    padding: 0;
+}
+
+h2{
+    font-family: Avant Garde;
+    font-weight: bolder;
+    position: absolute;
+    font-size: 150%;
+    top: 3%;
+    left: 50%;
+    margin: 0 -30px;
+}
+
+.container{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    margin: 0;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+
+/* ADD this to push gallery down from the positioned header  content */
+header{
+	height: 200px;
+}
+
+li{
+    display: inline-block;
+}
+
+li a {
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    font-family: Avant Garde;
+    font-weight: normal;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+.gallery{
+	width: 80%;
+	padding: 20px 0px;
+	margin: 0px auto;
+	overflow: auto;
+}
+
+p{
+    text-align: center;
+    font-weight: bolder;
+    margin: 10%;
+    animation: transitionIn 0.75s ease-in-out;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0)
+    }
+}
+/* REMOVE this
+.row{
+   width: 100%;
+   overflow: auto;
+}
+.column{
+	width: 
+    min-height: 250px;
+    float: left;
+	background-color: green;
+}*/
+
+/* ADD this for gallery layout*/
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  animation: transitionIn 0.75s ease-in-out;
+}
+
+@keyframes transitionIn{
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 20%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+.column img{
+    height: auto;
+	width:100%;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.column img:hover{
+    transform: scale(1.05);
+}

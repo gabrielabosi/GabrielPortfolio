@@ -1,0 +1,105 @@
+/*background changing*/
+@font-face {
+    font-family: Avant Garde;
+    src: url("Avant\ Garde/AVANTN.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Avant Garde;
+    background-image:url(images/GabeHalfBody.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+h1{
+    font-family: Avant Garde;
+    font-weight: bolder;
+    position: absolute;
+    color: white;
+    font-size: 150%;
+    top: 3%;
+    left: 50%;
+    margin: 0 -30px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0)
+    }
+}
+
+.nav__item {
+    margin: 0 15px;
+}
+
+.nav__link {
+    display: flex;
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+    position: relative;
+    padding: 5px 0;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.nav__link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 50%;
+    height: 2px;
+    background: black;
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.nav__link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    width: 50%;
+    height: 2px;
+    background: black;
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.nav__link:hover {
+    color: black;
+}
+
+.nav__link:hover:before {
+    right: 0;
+}
+
+.nav__link:hover:after {
+    left: 0;
+}
+

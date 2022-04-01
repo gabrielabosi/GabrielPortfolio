@@ -1,0 +1,127 @@
+/* this style sheet is for contacts*/
+
+@font-face {
+    font-family: Avant Garde;
+    src: url("Avant\ Garde/AVANTN.ttf");
+}
+
+
+
+body {
+
+    font-family: Avant Garde;
+    padding: 0;
+}
+
+h2{
+    font-family: Avant Garde;
+    font-weight: bolder;
+    position: absolute;
+    font-size: 150%;
+    top: 3%;
+    left: 50%;
+    margin: 0 -30px;
+}
+
+.container{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    margin: 0;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header{
+	height: 200px;
+}
+
+li{
+    display: inline-block;
+}
+
+li a {
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    font-family: Avant Garde;
+    font-weight: normal;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+
+p{
+    text-align: center;
+    font-family: Avant Garde;
+    font-weight: bold;
+    font-size: 100%;
+    position: relative;
+
+}
+
+.s-m{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 40%;
+    left: 50%;
+    margin: 0 -55px;
+    transition: translate(-50%,-50%);
+    animation: transitionIn 0.75s ease-in-out;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0)
+    }
+}
+
+.s-m a{
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: #2c3e50;
+    color: white;
+    margin: 0 6px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    font-size: 22px;
+}
+
+.s-m a:hover{
+    background: #e67e22;
+}
+
+.s-m a i{
+    transition: 0.4s all;
+}
+
+.s-m a:hover > i{
+    transform: scale(1.6) rotate(25deg);
+}
+
+
