@@ -1,0 +1,179 @@
+
+@font-face {
+    font-family: Avant Garde;
+    src: url("Avant\ Garde/AVANTN.ttf");
+}
+
+body {
+
+    font-family: Avant Garde;
+    padding: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-family: Avant Garde;
+    font-weight: bolder;
+    position: absolute;
+    font-size: 150%;
+    top: 3%;
+    left: 50%;
+    margin: 0 -30px;
+}
+
+.container{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    margin: 0;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header{
+	height: 200px;
+}
+
+li{
+    display: inline-block;
+}
+
+li a {
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    font-family: Avant Garde;
+    font-weight: normal;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+
+p{
+    text-align: center;
+    font-family: Avant Garde;
+    font-weight: bold;
+    font-size: 100%;
+    position: relative;
+
+}
+
+.conatiner1{
+    width: 80%;
+    margin: 80px auto;
+}
+
+.container h1{
+    padding: 60px 0;
+    color: #fff;
+    font-size: 44px;
+    text-align: center;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.col{
+    flex-basis: 50%;
+    min-width: 250px;
+}
+
+.feature-img{
+    width:83%;
+    margin: auto;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.small-img-row{
+    display: flex;
+    background: #efefef;
+    margin: 20px 0;
+    align-items: center;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 85%;
+}
+
+.small-img{
+    position: relative;
+}
+
+.small-img img{
+    width: 150px;
+}
+
+.small-img-row p{
+    margin-left: 20px;
+    color: #707070;
+    line-height: 22px;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0)
+    }
+}
+
+.play-btn{
+    width: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.small-img .play-btn{
+    width: 35px;
+}
+
+.video-player{
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+video:focus{
+    outline: none;
+}
+
+.close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    cursor: pointer;
+}
+

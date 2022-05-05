@@ -16,11 +16,11 @@ body {
     align-items: center;
     min-height: 100vh;
     font-family: Avant Garde;
-    background-image:url(images/DustyxGabe.JPG);
+    background-image:url(images/GabeonSet.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    animation: transitionIn 0.75s;
+    animation: transitionIn 0.75s ease-in-out;
 }
 
 h1{

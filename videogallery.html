@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="style5.css">
+      <title>Video Gallery</title>
+</head>
+<header>
+    <h2>Gabe</h2>
+    <div class="container">
+        <li><a href="index.html" class="cool-link">HOME</a></li>
+        <li><a href="aboutme.html" class="cool-link">ABOUTME</a></li>
+        <li><a href="portfolio.html" class="cool-link">PORTFOLIO</a></li>
+        <li><a href="videogallery.html" class="cool-link">VIDEOS</a></li>
+        <li><a href="contact.html" class="cool-link">CONTACT</a></li>
+    </div>
+</header>
+
+<body>
+    <div class="container1">
+        <div class="row">
+            <div class="col">
+                <div class="feature-img">
+                    <img src="images/Trapped Short film trailer Thumbnail.jpg" width="100%">
+                    <img src="images/play.png" class="play-btn" 
+                    onclick="playVideo('videos/Trapped | Short Film Trailer .mov')">
+                </div>
+            </div>
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="images/Trapped Short film trailer Thumbnail.jpg">
+                        <img src="images/play.png" class="play-btn"
+                        onclick="playVideo('videos/Trapped | Short Film Trailer .mov')">
+                    </div>
+                    <p>Trapped | Short Film Trailer<br>Thriller</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-player" id="videoPlayer">
+        <video width="100%" controls autoplay id="myVideo">
+            <source src="videos/Trapped | Short Film Trailer .mov" type="video/mov">
+        </video>
+        <img src="images/close.png" class="close-btn" 
+        onclick="stopVideo()">
+    </div>
+
+    <script>
+        var videoPlayer = document.getElementById("videoPlayer");
+        var myVideo = document.getElementById("myVideo");
+
+        function stopVideo(){
+            videoPlayer.style.display = "none";
+            myVideo.pause();
+            myVideo.currentTime = 0;
+        }
+
+        function playVideo(file){
+            myVideo.src = file;
+            videoPlayer.style.display = "block";
+            myVideo.play();
+        }
+
+    </script>
+</body>
+</html>
