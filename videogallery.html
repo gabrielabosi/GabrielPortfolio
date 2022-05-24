@@ -38,11 +38,29 @@
                     <p>Trapped | Short Film Trailer<br>Thriller</p>
                 </div>
             </div>
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="images/The Getaway Thumbnail.jpg">
+                        <img src="images/play.png" class="play-btn"
+                        onclick="playVideo('videos/The Getaway | Horror Short Film.mp4')">
+                    </div>
+                    <p>The Getaway | Short Film<br>Horror</p>
+                </div>
+            </div>
         </div>
     </div>
     <div class="video-player" id="videoPlayer">
         <video width="100%" controls autoplay id="myVideo">
             <source src="videos/Trapped | Short Film Trailer .m4a" type="videos/mp4">
+        </video>
+        <img src="images/close.png" class="close-btn" 
+        onclick="stopVideo()">
+    </div>
+    
+    <div class="video-player" id="videoPlayer">
+        <video width="100%" controls autoplay id="myVideo">
+            <source src="videos/The Getaway | Horror Short Film.mp4" type="videos/mp4">
         </video>
         <img src="images/close.png" class="close-btn" 
         onclick="stopVideo()">
